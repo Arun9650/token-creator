@@ -56,7 +56,7 @@ bg-opacity-90'
             <div className="z-10 flex flex-wrap m-10">
                 {tokenData.map((token) => (
 
-                    <Link href={`https://etherscan.io/address/${token.tokenAddress}`} >
+                    <Link href={`https://rinkeby.etherscan.io/token/${token.tokenAddress}`} >
                         <a target="_blank">
                     <div
                     key={token.tokenAddress}
@@ -81,7 +81,7 @@ bg-opacity-90'
             
             )
                 : (
-                    <div className='z-20'>
+                    <div className='z-20 '>
 
                         <div
                             className='text-3xl text-white z-10'>

@@ -1,9 +1,18 @@
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 import Link from 'next/link'
 import React from 'react'
 
 import {RiHealthBookLine} from 'react-icons/ri'
+import { useAccount } from 'wagmi'
+import dynamic from 'next/dynamic'
+
+// const {ConnectButton} = dynamic(() => import('@rainbow-me/rainbowkit'), {
+//   ssr: false,
+// })
+
 
 function Navbar() {
+  const {isConnected } = useAccount()
   return (
     <div className='z-0'>
          <div> <nav className='h-16 px-16 sticky   flex  items-center justify-between '>
@@ -13,7 +22,7 @@ function Navbar() {
     </div>
     </Link>
     <div className="flex text-white items-center ">
-      
+       { isConnected &&  <ConnectButton  />}
 
       <div className='flex mx-5 text-5xl relative'>
       <Link href={'/Token'}>
@@ -37,4 +46,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default  dynamic(() => Promise.resolve(Navbar), { ssr: false })
