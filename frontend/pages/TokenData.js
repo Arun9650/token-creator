@@ -56,6 +56,7 @@ bg-opacity-90'
             <div className="z-10 flex flex-wrap m-10">
                 {tokenData.map((token) => (
 
+                    // eslint-disable-next-line react/jsx-key
                     <Link href={`https://rinkeby.etherscan.io/token/${token.tokenAddress}`} >
                         <a target="_blank">
                     <div
