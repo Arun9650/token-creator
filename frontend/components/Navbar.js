@@ -1,14 +1,9 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import Link from 'next/link'
 import React from 'react'
-
 import {RiHealthBookLine} from 'react-icons/ri'
 import { useAccount } from 'wagmi'
-import dynamic from 'next/dynamic'
 
-// const {ConnectButton} = dynamic(() => import('@rainbow-me/rainbowkit'), {
-//   ssr: false,
-// })
 
 
 function Navbar() {

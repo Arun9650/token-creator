@@ -1,6 +1,6 @@
 import { Contract } from 'ethers';
 import React, { useEffect, useState } from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import { ERC20Address } from '../constants/ERC20Address';
 import { ERC20abi } from '../constants/ERC29abi'
 import { Button } from '@material-tailwind/react';
